@@ -1,21 +1,18 @@
 #include <stdio.h>
-
-#define alp_size 26
-
 /**
- * main - Prints the alphabet.
+ * main - Prints the alphabets.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
+	char alpha[26] = "abcdefghijklmnopqrstuvwxyz";
+	int p;
 
-    for (i = 97; i < 123; i++)
-    {
-        putchar(i);
-    }
-    putchar('n');
-    return (0);
+	for (p = 0; p < 26; p++)
+	{
+		putchar(alpha[p]);
+	}
+	putchar('\n');
+	return (0);
 }
-
