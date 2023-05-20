@@ -9,12 +9,11 @@
  */
 int main(void)
 {
-    char alp[alp_size] = "abcdefghijklmnopqrstuvwxyz";
     int i;
 
-    for (i = 0; i < sizeof(alp); i++)
+    for (i = 97; i < 123; i++)
     {
-        putchar(alp[i]);
+        putchar(i);
     }
     putchar('n');
     return (0);
