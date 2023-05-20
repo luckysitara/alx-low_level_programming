@@ -1,20 +1,22 @@
 #include <stdio.h>
+
+#define alp_size 26
+
 /**
- * main - Prints the alphabet
+ * main - Prints the alphabet.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char c = 'a';
+    char alp[alp_size] = "abcdefghijklmnopqrstuvwxyz";
+    int i;
 
-    while (c <= 'z')
+    for (i = 0; i < sizeof(alp); i++)
     {
-        putchar(c);
-        c++;
+        putchar(alp[i]);
     }
-
     putchar('n');
-    return 0;
+    return (0);
 }
 
