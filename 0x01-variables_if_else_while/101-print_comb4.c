@@ -1,25 +1,25 @@
 #include <stdio.h>
+
 /**
  * main - prints all possible different combinations of three digits
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int p, o, n;
+	int a, b, c;
 
-	for (p = 48; p < 58; p++)
+	for (a = 48; a < 58; a++)
 	{
-		for (o = 49; o < 58; p++)
+		for (b = 49; b < 58; b++)
 		{
-			for (n = 50; n < 58; n++)
+			for (c = 50; c < 58; c++)
 			{
-				if (n > o && o > p)
+				if (a > b && b > a)
 				{
-					putchar(p);
-					putchar(o);
-					putchar(n);
-					if (p != 55 || o != 56)
-
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					if (a != 55 || b != 56)
 					{
 						putchar(',');
 						putchar(' ');
@@ -31,4 +31,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
