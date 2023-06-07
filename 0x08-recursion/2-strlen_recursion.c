@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-    int a;
+	int a;
 
-    a = _strlen_recursion("Corbin Coleman");
-    printf("%d\n", a);
-    return (0);
+	a = _strlen_recursion("Corbin Coleman");
+	printf("%d\n", a);
+	return (0);
 }
