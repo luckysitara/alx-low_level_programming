@@ -1,28 +1,28 @@
 #include "main.h"
 /**
- * _strncpy - copy a string
- * @dest: input value
- * @src: input value
- * @n: input value
+ * _strncpy - concatinate the values of two integers.
  *
- * Return: dest
+ * @dest: arg a
+ *
+ * @src: arg b
+ *
+ * @n: arg n
+ *
+ * Return: void.
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int a;
+	int i;
 
-	a = 0;
-	while (a < n && src[a] != '\0')
+	for (i = 0; src[i] != '\0' && i < n; i++)
 	{
-		dest[a] = src[a];
-		a++;
+		dest[i] = src[i];
 	}
-	while (a < n)
-	{
-		dest[a] = '\0';
-		a++;
-	}
+	for (; i < n; i++)
+
+	dest[i] = '\0';
+
 
 	return (dest);
 }

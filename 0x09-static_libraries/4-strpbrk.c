@@ -1,13 +1,26 @@
 #include "main.h"
 /**
- * _puts - prints a string, followed by a new line, to stdout
- * @str: string to print
+ * _strpbrk -  searches a string for any of a set of bytes.
+ *
+ * @s: char pointer
+ *
+ * @accept: char pointer
+ *
+ * Return: string
  */
-void _puts(char *str)
+
+char *_strpbrk(char *s, char *accept)
 {
-	while (*str != '\0')
+	unsigned int counter;
+
+	for (; *s != '\0'; s++)
 	{
-		_putchar(*str++);
+		for (counter = 0; accept[counter] != '\0'; counter++)
+		{
+
+			if (*s == accept[counter])
+				return (s);
+		}
 	}
-		_putchar('\n');
+	return (0);
 }

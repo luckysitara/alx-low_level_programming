@@ -10,13 +10,13 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int acount;
+	int count;
 
 	for (; haystack[0]; haystack++)
 	{
-		for (acount = 0; haystack[acount] == needle[acount]; acount++)
+		for (count = 0; haystack[count] == needle[count]; count++)
 			;
-		if (!(needle[acount]))
+		if (!(needle[count]))
 			return (haystack);
 	}
 	return (0);
