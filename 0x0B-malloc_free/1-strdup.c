@@ -10,22 +10,27 @@
  */
 char *_strdup(char *str)
 {
-    char *new_str;
+	char *new_str;
 
-    /* Check if str is NULL */
-    if (str == NULL)
+	int a, b = 0;
+
+	/* Check if str is NULL */
+	if (str == NULL)
         return (NULL);
 
-    /* Allocate memory for the new string */
-    new_str = malloc(sizeof(char) * (strlen(str) + 1));
+	a = 0;
+	while (str[a] != '\0')
+		a++;
 
-    /* Check if memory allocation was successful */
-    if (new_str == NULL)
-        return (NULL);
+	/* Allocate memory for the new string */
+	new_str = malloc(sizeof(char) * (a + 1));
 
-    /* Copy the string to the newly allocated memory */
-    strcpy(new_str, str);
+	/* Check if memory allocation was successful */
+	if (new_str == NULL)
+	return (NULL);
 
-    /* Return the pointer to the new string */
-    return (new_str);
+	for (b = 0; str[b]; b++)
+		new_str[b] = str[b];
+	/* Return the pointer to the new string */
+	return (new_str);
 }
