@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -9,23 +8,25 @@
  */
 int count_word(char *s)
 {
-	int mag, ct, wd;
+	int flag, c, w;
 
-	mag = 0;
-	wd = 0;
+	flag = 0;
+	w = 0;
 
-	for (ct = 0; s[ct] != '\0'; ct++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[ct] == ' ')
-			mag = 0;
-		else if (mag == 0)
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			mag = 1;
-			wd++;
+			flag = 1;
+			w++;
 		}
 	}
-	return (wd);
-}/**
+
+	return (w);
+}
+/**
  * **strtow - splits a string into words
  * @str: string to split
  *
@@ -73,3 +74,4 @@ char **strtow(char *str)
 
 	return (matrix);
 }
+
