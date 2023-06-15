@@ -12,25 +12,22 @@ char *_strdup(char *str)
 {
 	char *new_str;
 
-	int a, b = 0;
+	int i, r = 0;
 
-	/* Check if str is NULL */
 	if (str == NULL)
-        return (NULL);
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
 
-	a = 0;
-	while (str[a] != '\0')
-		a++;
+	new_str = malloc(sizeof(char) * (i + 1));
 
-	/* Allocate memory for the new string */
-	new_str = malloc(sizeof(char) * (a + 1));
-
-	/* Check if memory allocation was successful */
 	if (new_str == NULL)
-	return (NULL);
+		return (NULL);
 
-	for (b = 0; str[b]; b++)
-		new_str[b] = str[b];
-	/* Return the pointer to the new string */
+	for (r = 0; str[r]; r++)
+		new_str[r] = str[r];
+
 	return (new_str);
 }
+
