@@ -1,14 +1,17 @@
-#include "1-pi.h"
-#include "1-pi.h"
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - Prints the name of the file it was compiled from
  *
- * Return: Always 0.
- ii*/
+ *
+ * Return: 0
+ */
+
+
 int main(void)
 {
+
 	printf("%s\n", __FILE__);
+
 	return (0);
 }
