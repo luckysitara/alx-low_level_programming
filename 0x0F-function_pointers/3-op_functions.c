@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include "function_pointers.h"
+#include <stddef.h>
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
