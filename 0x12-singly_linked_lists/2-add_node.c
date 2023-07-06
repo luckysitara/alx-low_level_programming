@@ -1,36 +1,35 @@
 #include "lists.h"
+
 /**
- * add_node - Adds a new node at the beginning of a list_t list.
- * @head: A pointer to the head of the linked list.
- * @str: The string to be added to the new node.
- *
- * Return: The address of the new element, or NULL if it failed.
- */
+* add_node - Adds node to linked list
+*
+* @head: Double Pointer
+*
+* @str: Pointer to struct pointer
+*
+* Return: address of the new element, or NULL
+*/
+
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
+	unsigned int i = 0;
+	list_t *list;
 
-	if (str == NULL)
+	list = malloc(sizeof(list_t));
+
+	while (list == NULL)
 	{
 		return (NULL);
+	break;
 	}
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	while (str[i] != '\0')
 	{
-		return (NULL);
+		i++;
 	}
-
-	new->str = strdup(str);
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-
-	new->next = *head;
-	*head = new;
-
-	return (new);
+	list->len = i;
+	list->str = strdup(str);
+	list->next = *head;
+	*head = list;
+	return (*head);
 }
-
