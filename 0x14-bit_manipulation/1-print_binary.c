@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 {
 
-	if(!n)
+	if (!n)
 	{
 		puts("not a valid option");
 	}
