@@ -10,10 +10,6 @@
 void print_binary(unsigned long int n)
 {
 
-	if (!n)
-	{
-		puts("not a valid option");
-	}
 	if (n > 1)
 	{
 		print_binary(n >> 1);
