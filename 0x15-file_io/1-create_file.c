@@ -11,11 +11,11 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fprnt, length = 0, fpntWrite;
+	int f, length = 0, fWrite;
 
-	fprnt = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
+	f = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
-	if (fprnt == -1)
+	if (f == -1)
 		return (-1);
 
 	if (text_content == NULL)
@@ -28,12 +28,12 @@ int create_file(const char *filename, char *text_content)
 		length++;
 	}
 
-	fprntWrite = write(fprnt, text_content, length);
+	fWrite = write(f, text_content, length);
 
-	if (fprntWrite == -1)
+	if (fWrite == -1)
 	{
 		return (-1);
 	}
-	close(fprnt);
+	close(f);
 	return (1);
 }
