@@ -16,6 +16,6 @@ size_t print_dlistint(const dlistint_t *h)
 		node_count++; /* Step 5: Increment the node_count.*/
 	}
 
-	return node_count; /* Step 7: Return the total number of nodes.*/
+	return (node_count); /* Step 7: Return the total number of nodes.*/
 }
 
