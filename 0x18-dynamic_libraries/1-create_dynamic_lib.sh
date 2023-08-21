@@ -1,6 +1,5 @@
 #!/bin/bash
 #create object files with
-gcc *.c -c -fPIC
+gcc -fPIC -c *.c
 #create dynamic files with all .o files using
 gcc *.o -shared -o liball.so
-chmod 755 libdynamic.so
