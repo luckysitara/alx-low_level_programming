@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * hash_table_create - create a new hash table
+ * free the hash tablei
+ * @size: Size of the hash table
+ * Return: null
+ */
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_table = NULL;
@@ -18,7 +25,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(new_table);
 		return (NULL);
 	}
-       
 	i = 0;
 	while (i < size)
 	{

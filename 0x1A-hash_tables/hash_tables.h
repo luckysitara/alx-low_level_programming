@@ -8,7 +8,7 @@
  *
  * @key: the key, string
  * The key is unique in the hashtable
- * @blaue: the balue corresponding to a key
+ * @value: the balue corresponding to a key
  * @next: a pointer to the next node of the list
  *
  */
